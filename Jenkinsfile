@@ -1,9 +1,6 @@
 def buildUserId
 def authorizedUserId
 pipeline {
-     options {
-        buildDiscarder(logRotator(numToKeepStr: '2'))
-    }
     agent any
     stages {
         stage('Populate Build and Authorized Users') {
