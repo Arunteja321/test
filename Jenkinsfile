@@ -8,11 +8,6 @@ pipeline {
     stages {
         stage('Populate Build and Authorized Users') {
             steps {
-                wrap([$class: 'BuildUser']) {
-                    script {
-                        buildUserId = env.BUILD_USER_ID
-                    }
-                }
                 withCredentials([string(credentialsId: 'authorizedUser', variable: 'user')]) {
                     script {
                         authorizedUserId = user
