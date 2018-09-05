@@ -5,11 +5,6 @@ pipeline {
     stages {
         stage('Populate Build and Authorized Users') {
             steps {
-                withCredentials([string(credentialsId: 'authorizedUser', variable: 'user')]) {
-                    script {
-                        authorizedUserId = user
-                    }
-                }
                 echo buildUserId
                 echo authorizedUserId
             }
