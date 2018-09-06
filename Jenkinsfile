@@ -2,7 +2,7 @@ def buildUserId
 def authorizedUserId
 pipeline {
     options {
-        buildDiscarder(logRotator(numToKeepStr: '1'))
+        buildDiscarder(logRotator(numToKeepStr: '2'))
     }
     agent any
     stages {
